@@ -1,0 +1,209 @@
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333; 
+}
+
+body {
+    transition: 1s;
+    background: #333;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+    overflow: hidden;
+  }
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    /*background: rgba(255, 255, 255, 0.8);*/
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 1s ease-in-out;
+}
+
+.container {
+    z-index: 2; 
+    color: #333;
+    font-size: 20px;
+  }
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    /*color: #ff7e5f;*/ 
+    color: white;
+    animation: zoom-in 1s ease-in-out;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    /*color: #333;*/
+    color: #D3D3D3;
+    animation: fadeIn 2s ease-out;
+}
+
+.button {
+    /*background: #ff6f61;*/
+    background: #1E90FF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+  }
+  
+  .button:hover {
+    transform: scale(1.1);
+    background: #ff3d2e;
+  }
+
+
+body.zooming .container {
+    transform: scale(1.1);
+}
+
+.container h1.zooming {
+    animation: zoom-out 1s ease-in-out;
+}
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+  .animsition,
+  .animsition-overlay {
+    position: relative;
+    opacity: 0;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+  
+  @-webkit-keyframes zoom-in {
+    0% {
+      -webkit-transform: scale(.7);
+              transform: scale(.7);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoom-in {
+    0% {
+      -webkit-transform: scale(.7);
+              transform: scale(.7);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+  .zoom-in {
+    -webkit-animation-name: zoom-in;
+            animation-name: zoom-in;
+  }
+
+  @-webkit-keyframes zoom-out {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      -webkit-transform: scale(.7);
+              transform: scale(.7);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  
+  @keyframes zoom-out {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      -webkit-transform: scale(.7);
+              transform: scale(.7);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  
+  .zoom-out {
+    -webkit-animation-name: zoom-out;
+            animation-name: zoom-out;
+}
+
+
+@-webkit-keyframes scaleUp {
+	from { opacity: 0; -webkit-transform: scale(.8); }
+}
+@keyframes scaleUp {
+	from { opacity: 0; -webkit-transform: scale(.8); transform: scale(.8); }
+}
+
+.pt-page-scaleUp {
+	-webkit-animation: scaleUp .7s ease both;
+	animation: scaleUp .7s ease both;
+}
