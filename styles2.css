@@ -1,10 +1,8 @@
-/* styles.css */
-
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; /* Para evitar rolagem durante a animação */
+    overflow: hidden; 
 }
 
 #content {
@@ -16,12 +14,10 @@ body, html {
     transition: transform 0.6s ease-in-out;
 }
 
-/* Classe para a animação de saída */
 .zoom-out {
     transform: scale(0.9);
 }
 
-/* Classe para a animação de entrada */
 .zoom-in {
     transform: scale(1.1);
 }
