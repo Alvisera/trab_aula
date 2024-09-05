@@ -100,18 +100,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (link) {
       link.addEventListener('click', function(e) {
-          e.preventDefault(); // Previne o comportamento padrão do link
+          e.preventDefault(); 
 
-          // Adiciona a classe de animação de saída
           document.body.classList.add('zooming-out');
 
-          // Espera a animação terminar antes de mudar de página
           setTimeout(() => {
               window.location.href = link.href;
-          }, 50); // O tempo deve corresponder ao tempo da animação CSS
+          }, 50); 
       });
   }
 });
+
 
 /*CALCULO DO IMC*/
 
